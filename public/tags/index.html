@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Collaborative Frontend Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body class="bg-warning">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand position-absolute position-fixed m-0 p-0" href="../" style="z-index: 1;">
+                <img class="m-0 p-0" src="../assets/team-b.png" width="64" class="d-inline-block align-top"
+                    alt="team b" />
+            </a>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item ml-3 ml-sm-1">
+                        <a class="nav-link btn btn-lg btn-outline-info p-sm-1 p-md-4" href="../">Articles</a>
+                    </li>
+
+                    <li class="nav-item m-1 m-auto">
+                        <a class="nav-link btn btn-lg btn-outline-info p-sm-1 p-md-4" href="../authors/">Authors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-dark text-light">
+        <div class="row">
+            <div class="mx-auto my-3">
+                <form class="form-inline mx-auto">
+                    <div class="form-group mr-2">
+                        <input class="form-control" type="search" id="search-bar" placeholder="Search" />
+                    </div>
+                    <div class="form-group">
+                        <a class="form-control btn btn-outline-info" id="serach-btn" type="submit">Search</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-4 font-weight-bold text-warning text-center mb-4">
+                    Articles tagged:
+                </h2>
+                <h3 id="tagNameId"
+                    class="text-center rounded-pill border border-warning pb-2 px-4 font-weight-bold text-warning d-inline">
+                </h3>
+            </div>
+
+            <div class="nav mx-auto p-0 m-0 my-2">
+                <div class="nav-link mx-0 p-0 mr-2">
+                    <div class="" id="selectRoot"></div>
+                </div>
+
+            </div>
+            <div class="nav mx-auto p-0 m-1 my-2">
+                <div class="nav-link mx-0 p-0">
+                    <a class="btn btn-outline-secondary mx-0 px-1" id="sort-btn" href="#">Sort by name</a>
+                </div>
+            </div>
+            <hr class="w-100 mb-1 pb-1 mt-0 rounded-pill bg-warning" />
+        </div>
+
+        <nav>
+            <ul class="breadcrumb bg-dark text-white">
+                <li class="breadcrumb-item"><a href="../">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Tag</li>
+                <li class="breadcrumb-item active"></li>
+                <li class="ml-auto mr-2 text-muted">
+                    <span id="tagsArticlesNum"></span>
+                    Articles
+                </li>
+                <hr class="w-100 p-md-1 rounded-pill bg-warning" />
+            </ul>
+        </nav>
+    </div>
+
+    <div id="root"></div>
+
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="../data/data.js"></script>
+    <script src="../data/tags.js"></script>
+    <script src="../data/articles.js"></script>
+    <script src="../data/authors.js"></script>
+    <script src="../data/comments.js"></script>
+    <script src="../data/mainFunction.js"></script>
+    <script src="../templates/cardTpl.js"></script>
+    <script src="../templates/tagsBtnTpl.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
